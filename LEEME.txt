@@ -1,0 +1,39 @@
+NOVA BUILDERS - PAGINA WEB CON TU PROPIO DOMINIO
+=================================================
+Archivos: index.html (la pagina), carpeta images (tus fotos), manifest/sw/icon (para instalarla como app en el celular).
+
+TU DOMINIO: novabuildersutah.com (ya viene en el archivo CNAME de este paquete)
+
+PASO 1 - Publicar gratis en GitHub Pages
+1. Crea una cuenta en github.com y un repositorio nuevo, publico (ejemplo: novabuilders-site).
+2. Add file > Upload files: sube TODO lo de esta carpeta (incluida la carpeta images). Commit.
+3. Settings > Pages > Source: "Deploy from a branch", branch main, carpeta / (root). Save.
+4. En Custom domain debe aparecer novabuildersutah.com (si no, escribelo y Save). Cuando aparezca, marca "Enforce HTTPS".
+
+PASO 2 - Conectar el dominio en GoDaddy
+1. GoDaddy > My Products > tu dominio > DNS (Administrar DNS).
+2. En el dominio, apaga el Forwarding (reenvio) si lo pusiste. En DNS borra el registro A "Parked" de @.
+3. Agrega 4 registros tipo A, Name "@":
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+4. Cambia el registro CNAME "www" para que apunte a: TU-USUARIO-DE-GITHUB.github.io (sin https, sin diagonal)
+5. Espera de unos minutos a 24 horas. (Verifica estos valores en la documentacion de GitHub Pages por si cambian.)
+
+OPCION MAS FACIL: entra a app.netlify.com/drop, arrastra esta carpeta, y en Domain settings conecta tu dominio de GoDaddy.
+
+TUS FOTOS
+- Mira images/LEEME.txt: ahi estan los nombres (hero.jpg, work1.jpg ... work6.jpg).
+- Reemplaza los archivos en GitHub y la pagina se actualiza sola.
+
+CAMBIAR TELEFONO, CORREO O DIRECCION
+- Abre index.html y busca "EDIT HERE" (esta cerca del final). Cambia ahi los datos.
+
+QUE INCLUYE
+- Ingles y espanol, movil, portafolio, servicios, historias, visualizador de estilos con foto (quitar/cambiar foto),
+  calculadora de financiamiento, preguntas frecuentes, contacto, firma de contratos y se puede instalar como app.
+
+QUE NO INCLUYE (solo funciona dentro de Claude)
+- Bot con IA, plan de diseno con IA y panel de administracion.
+- El formulario de contacto abre el correo del cliente con el mensaje listo. Para recibir mensajes directo en tu correo se puede agregar un servicio como Formspree.
